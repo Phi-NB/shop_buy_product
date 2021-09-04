@@ -1,0 +1,109 @@
+.heading h1 {
+  font-size: 60px;
+}
+.heading h4 {
+  font-size: 20px;
+}
+
+.bg-bland-gray {
+  background-color: #d2d2d2;
+}
+
+.bg-medium-gray {
+  background-color: #bbbbbb;
+}
+
+.bg-dark-gray {
+  background-color: #606060;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+    display: none;
+  }
+  to {
+    opacity: 1;
+    display: block;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    display: none;
+  }
+  to {
+    opacity: 1;
+    display: block;
+  }
+}
+.content .product .row {
+  margin: 0 0;
+  border-bottom: 1px solid #ccc;
+}
+.content .product .row a {
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  position: relative;
+}
+.content .product .row a::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: -webkit-transform 0.5s linear;
+  transition: -webkit-transform 0.5s linear;
+  transition: transform 0.5s linear;
+  transition: transform 0.5s linear, -webkit-transform 0.5s linear;
+}
+.content .product .row a:hover .text {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform 0.5s linear;
+  transition: -webkit-transform 0.5s linear;
+  transition: transform 0.5s linear;
+  transition: transform 0.5s linear, -webkit-transform 0.5s linear;
+}
+.content .product .row a:hover::before {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+}
+.content .product .row a .text {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: -webkit-transform 0.5s linear;
+  transition: -webkit-transform 0.5s linear;
+  transition: transform 0.5s linear;
+  transition: transform 0.5s linear, -webkit-transform 0.5s linear;
+}
+.content .product .row .col-s {
+  padding: 0 0;
+}
+.content .product .row .col-s img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.page-footer h6 {
+  color: #676767;
+}
+.page-footer a, .page-footer p {
+  color: #9e9e9e;
+  text-decoration: none;
+}
+.page-footer a:hover {
+  color: #676767;
+}
