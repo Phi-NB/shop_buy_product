@@ -1,0 +1,175 @@
+.heading{
+    h1{
+        font-size: 60px;
+    }
+    h4{
+        font-size: 20px;
+    }
+}
+
+.bg-bland-gray{
+    background-color: #f3f4f8;
+}
+
+.bg-medium-gray{
+    background-color: #bbbbbb;
+}
+
+.bg-dark-gray{
+    background-color: #606060;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        display: none;
+    }
+    to{
+        opacity: 1;
+        display: block;
+    }
+}
+
+.navbar{
+    .user, .basket{
+        &:hover{
+            .bi, p{
+                color: rgba(0,0,0,0.7) !important;
+            }
+        }
+    }
+
+    .menu-mobile{
+        display: flex;
+        .menu.open{
+            transform: translateX(0);
+            transition: all 0.5s ease;
+        }
+        .menu{
+            width: 200px;
+            z-index: 5;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            background-color: #8d8d8d;
+            padding: 0px 20px;
+            transform: translateX(-100%);
+            transition: all 0.5s ease;
+            .funtion{
+                display: flex;
+                justify-content: space-between;
+                padding: 20px 0;
+            }
+            .menu-list{
+                list-style: none;
+                padding: 0 0px;
+                .menu-item{
+                    &:hover .menu-link{
+                        opacity: 0.5;
+                    }
+                    .menu-link{
+                        color: #fff;
+                        text-decoration: none;
+                        line-height: 40px;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+.content{
+    .product{
+        .row{
+            margin: 0 0;
+            border-bottom: 1px solid #ccc;
+            a{
+                border-top: 1px solid #ccc;
+                border-left: 1px solid #ccc;
+                border-right: 1px solid #ccc;
+                position: relative;
+                overflow: hidden;
+                transition: all 0.5s ease;
+                &::before {
+                    content: " ";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    background-color: rgba(0, 0, 0, 0.5);
+                    transform: scale(0);
+                    transition: transform 0.5s linear;
+                }
+                &:hover{
+                    .text{
+                        transform: scale(1);
+                        transition: transform 0.5s linear;
+                    }
+                    &::before{
+                        transform: scale(1);
+                        transition: transform 0.5s ease;
+                    }
+                }
+                .text{
+                    transform: scale(0);
+                    transition: transform 0.5s linear;
+                }
+                .image{
+                    max-width: 100%;
+                    height: auto;
+                }
+            }
+            .col-s{
+                padding: 0 0;
+            }
+        }
+    }
+}
+
+.inspiration{
+    overflow: hidden;
+    .carousel-control-prev, .carousel-control-next{
+        width: unset;
+        background-color: #e4e4e4;
+    }
+    .carousel-item{
+        img{
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+}
+
+.page-footer{
+    h6{
+        color: #676767;
+    }
+    a, p{
+        color: #9e9e9e;
+        text-decoration: none;
+    }
+    a{
+        &:hover{
+            color: #676767;
+        }
+    }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {  }
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) { }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) {  }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199.98px) {  }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { }

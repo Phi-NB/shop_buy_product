@@ -6,7 +6,7 @@
 }
 
 .bg-bland-gray {
-  background-color: #d2d2d2;
+  background-color: #f3f4f8;
 }
 
 .bg-medium-gray {
@@ -38,6 +38,56 @@
     display: block;
   }
 }
+.navbar .user:hover .bi, .navbar .user:hover p, .navbar .basket:hover .bi, .navbar .basket:hover p {
+  color: rgba(0, 0, 0, 0.7) !important;
+}
+.navbar .menu-mobile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.navbar .menu-mobile .menu.open {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.navbar .menu-mobile .menu {
+  width: 200px;
+  z-index: 5;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #8d8d8d;
+  padding: 0px 20px;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.navbar .menu-mobile .menu .funtion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px 0;
+}
+.navbar .menu-mobile .menu .menu-list {
+  list-style: none;
+  padding: 0 0px;
+}
+.navbar .menu-mobile .menu .menu-list .menu-item:hover .menu-link {
+  opacity: 0.5;
+}
+.navbar .menu-mobile .menu .menu-list .menu-item .menu-link {
+  color: #fff;
+  text-decoration: none;
+  line-height: 40px;
+}
+
 .content .product .row {
   margin: 0 0;
   border-bottom: 1px solid #ccc;
@@ -47,6 +97,9 @@
   border-left: 1px solid #ccc;
   border-right: 1px solid #ccc;
   position: relative;
+  overflow: hidden;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 .content .product .row a::before {
   content: " ";
@@ -87,10 +140,23 @@
   transition: transform 0.5s linear;
   transition: transform 0.5s linear, -webkit-transform 0.5s linear;
 }
+.content .product .row a .image {
+  max-width: 100%;
+  height: auto;
+}
 .content .product .row .col-s {
   padding: 0 0;
 }
-.content .product .row .col-s img {
+
+.inspiration {
+  overflow: hidden;
+}
+.inspiration .carousel-control-prev, .inspiration .carousel-control-next {
+  width: unset;
+  background-color: #e4e4e4;
+}
+.inspiration .carousel-item img {
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
